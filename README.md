@@ -79,7 +79,7 @@ student-performance-analyzer/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <your-repo-link>
+git clone <https://github.com/Nandini-Soota/Student-performance-analyzer-system>
 cd student-performance-analyzer
 ```
 
