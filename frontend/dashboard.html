@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
+    <title>Student Analytics Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Analysis Result</h2>
-
-    <p id="resultText">Loading...</p>
-
-    <button onclick="goBack()">Analyze Again</button>
+<div class="navbar">
+    <h2>📊 Student Analyzer</h2>
+    <button onclick="toggleDarkMode()">🌙</button>
 </div>
 
-<script src="script.js"></script>
+<select id="department">
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="ME">ME</option>
+    <option value="CE">CE</option>
+</select>
+
+<select id="year">
+    <option value="1">1st Year</option>
+    <option value="2">2nd Year</option>
+    <option value="3">3rd Year</option>
+    <option value="4">4th Year</option>
+</select>
+
+<div class="container dashboard">
+
+    <h2>Enter Student Data</h2>
+
+    <div class="grid">
+
+        <input type="number" id="cgpa" placeholder="CGPA (0-10)">
+        <input type="number" id="attendance" placeholder="Attendance (%)">
+        <input type="number" id="coding" placeholder="Coding Score (0-100)">
+        <input type="number" id="internships" placeholder="Internships">
+        <input type="number" id="projects" placeholder="Projects">
+        <input type="number" id="certifications" placeholder="Certifications">
+        <input type="number" id="backlogs" placeholder="Backlogs">
+
+    </div>
+
+    <button class="primary-btn" onclick="analyze()">Analyze Performance</button>
+    <button class="secondary-btn" onclick="resetForm()">Reset</button>
+
+</div>
+
 </body>
+<script src="script.js"></script>
 </html>
